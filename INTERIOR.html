@@ -1,582 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<body class="header-page wsite-page-interior full-width-body-off header-overlay-on alt-nav-off wsite-theme-light fade-in">
 
-  <title>Interior Design — Haeji, Hwang</title>
+  <div class="wrapper">
 
-  <meta name="description"
-        content="Interior design portfolio of Haeji Hwang, including commercial, residential, educational, medical, and hospitality spaces">
+    <div class="birdseye-header">
+      <div class="nav-wrap">
+        <div class="container">
 
-  <meta property="og:site_name" content="Haeji, Hwang">
-  <meta property="og:title" content="Interior Design — Haeji, Hwang">
-  <meta property="og:description"
-        content="Interior design portfolio including commercial, residential, educational, medical, and hospitality spaces">
-  <meta property="og:url"
-        content="https://haejihwang.github.io/INTERIOR.html">
+          <div class="logo">
+            <span class="wsite-logo">
+              <a href="index.html">
+                <span id="wsite-title">Haeji, Hwang</span>
+              </a>
+            </span>
+          </div>
 
-  <link rel="stylesheet"
-        href="INTERIOR_files/main_style.css">
+          <div class="nav desktop-nav">
+            <ul class="wsite-menu-default">
 
-  <style>
-    :root {
-      --text: #3f3f3f;
-      --muted: #626262;
-      --accent: #8d2424;
-      --light-accent: #a48f7a;
-      --border: #dddddd;
-      --max-width: 1200px;
-    }
+              <li class="wsite-menu-item-wrap wsite-nav-1">
+                <a href="index.html" class="wsite-menu-item">
+                  Home
+                </a>
+              </li>
 
-    * {
-      box-sizing: border-box;
-    }
+              <li class="wsite-menu-item-wrap wsite-nav-2">
+                <a href="ARCHITECTURE/" class="wsite-menu-item">
+                  ARCHITECTURE
+                </a>
+              </li>
 
-    html {
-      scroll-behavior: smooth;
-    }
+              <li class="active wsite-menu-item-wrap wsite-nav-3">
+                <a href="INTERIOR.html" class="wsite-menu-item">
+                  INTERIOR
+                </a>
+              </li>
 
-    body {
-      margin: 0;
-      color: var(--text);
-      background: #ffffff;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-    }
+              <li class="wsite-menu-item-wrap wsite-nav-4">
+                <a href="CONTACT.html" class="wsite-menu-item">
+                  Contact
+                </a>
+              </li>
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
+            </ul>
+          </div>
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
+          <a class="hamburger" aria-label="Menu" href="#">
+            <span></span>
+          </a>
 
-    a:hover {
-      opacity: 0.7;
-    }
-
-    .site-header {
-      position: fixed;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.94);
-      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .nav-container {
-      width: min(100% - 40px, var(--max-width));
-      min-height: 76px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 30px;
-    }
-
-    .site-title {
-      font-size: 20px;
-      letter-spacing: 0.03em;
-      white-space: nowrap;
-    }
-
-    .site-nav {
-      display: flex;
-      align-items: center;
-      gap: 28px;
-      font-size: 13px;
-      letter-spacing: 0.08em;
-    }
-
-    .site-nav a {
-      padding: 8px 0;
-    }
-
-    .site-nav a.active {
-      color: var(--accent);
-      border-bottom: 1px solid var(--accent);
-    }
-
-    .hero {
-      min-height: 360px;
-      padding: 160px 20px 80px;
-      display: flex;
-      align-items: flex-end;
-      background:
-        linear-gradient(
-          rgba(0, 0, 0, 0.18),
-          rgba(0, 0, 0, 0.18)
-        ),
-        url("INTERIOR_files/2133918788.jpg") center / cover no-repeat;
-    }
-
-    .hero-content {
-      width: min(100%, var(--max-width));
-      margin: 0 auto;
-      color: #ffffff;
-    }
-
-    .hero-content a {
-      text-decoration: underline;
-    }
-
-    main {
-      width: min(100% - 40px, var(--max-width));
-      margin: 0 auto;
-      padding: 90px 0;
-    }
-
-    .intro {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-
-    .intro h1 {
-      margin: 0 0 18px;
-      font-size: 32px;
-      font-weight: 400;
-      letter-spacing: 0.08em;
-    }
-
-    .intro p {
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .section-title {
-      margin: 80px 0 35px;
-      text-align: center;
-      font-size: 24px;
-      font-weight: 400;
-      color: var(--text);
-    }
-
-    .section-title::after {
-      content: "";
-      display: block;
-      width: 50%;
-      max-width: 500px;
-      height: 1px;
-      margin: 25px auto 0;
-      background: var(--border);
-    }
-
-    .project {
-      display: grid;
-      grid-template-columns: minmax(190px, 24%) 1fr;
-      gap: 35px;
-      padding: 35px 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .project-info h2 {
-      margin: 0 0 15px;
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: 0.03em;
-    }
-
-    .project-info p {
-      margin: 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .project-gallery {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      align-items: start;
-    }
-
-    .project-gallery img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      background: #eeeeee;
-    }
-
-    .gallery-two {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .gallery-four {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .gallery-five {
-      grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-
-    .full-gallery {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
-    }
-
-    .full-gallery img {
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
-      background: #eeeeee;
-    }
-
-    .next-page {
-      margin-top: 90px;
-      padding-top: 35px;
-      border-top: 1px solid var(--border);
-      text-align: right;
-    }
-
-    .next-page a {
-      color: var(--accent);
-      letter-spacing: 0.08em;
-    }
-
-    .contact-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 10px 22px;
-      color: #ffffff;
-      background: var(--accent);
-      font-size: 13px;
-      letter-spacing: 0.08em;
-    }
-
-    .site-footer {
-      min-height: 80px;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 767px) {
-      .nav-container {
-        min-height: 64px;
-        width: min(100% - 30px, var(--max-width));
-      }
-
-      .site-title {
-        font-size: 17px;
-      }
-
-      .site-nav {
-        gap: 13px;
-        font-size: 10px;
-      }
-
-      .hero {
-        min-height: 280px;
-        padding: 120px 15px 45px;
-      }
-
-      main {
-        width: min(100% - 30px, var(--max-width));
-        padding: 55px 0;
-      }
-
-      .intro h1 {
-        font-size: 25px;
-      }
-
-      .project {
-        display: block;
-      }
-
-      .project-info {
-        margin-bottom: 25px;
-      }
-
-      .project-gallery,
-      .gallery-two,
-      .gallery-four,
-      .gallery-five,
-      .full-gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 480px) {
-      .site-nav {
-        gap: 8px;
-        letter-spacing: 0;
-      }
-
-      .project-gallery,
-      .gallery-two,
-      .gallery-four,
-      .gallery-five,
-      .full-gallery {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-  <header class="site-header">
-    <div class="nav-container">
-      <a class="site-title" href="index.html">
-        Haeji, Hwang
-      </a>
-
-      <nav class="site-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="ARCHITECTURE/">Architecture</a>
-        <a href="INTERIOR.html" class="active">Interior</a>
-        <a href="CONTACT.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="hero-content">
-      <p>
-        <a href="#work">3Ds</a> /
-        <a href="#work">work process</a> /
-        <a href="#branding">naming</a> /
-        <a href="#furniture">furniture</a>
-      </p>
-    </div>
-  </section>
-
-  <main id="work">
-
-    <section class="intro">
-      <h1>INTERIOR DESIGN</h1>
-
-      <p>
-        / commercial / residential / educational / medical space /
-      </p>
-
-      <p>
-        <small>
-          * no use without permission / 무단 도용 금지 *
-        </small>
-      </p>
-    </section>
-
-    <h2 class="section-title">Tools</h2>
-
-    <div class="full-gallery">
-      <img src="INTERIOR_files/icon3_5.jpeg" alt="Interior design tools">
+        </div>
+      </div>
     </div>
 
-    <h2 class="section-title">W/O/R/K</h2>
+    <div class="banner-wrap">
+      <div class="wsite-elements wsite-not-footer wsite-header-elements">
 
-    <!-- Residential space styling -->
-    <section class="project">
-      <div class="project-info">
-        <h2>HOME STYLING</h2>
-        <p>
-          acquaintance's house<br><br>
-          - complete construction
-        </p>
+        <div class="wsite-section-wrap">
+          <div
+            class="wsite-section wsite-header-section wsite-section-bg-image"
+            style="
+              height:auto;
+              background-image:url('INTERIOR%20-%20Haeji,%20Hwang_files/2133918788.jpg');
+              background-repeat:no-repeat;
+              background-position:69.38% 33.28%;
+              background-size:110%;
+            "
+          >
+            <div class="wsite-section-content">
+              <div class="container" style="padding-top:88px;">
+                <div class="banner">
+                  <div class="wsite-section-elements">
+
+                    <div class="paragraph" style="text-align:left;">
+                      <font size="2">
+                        <a href="#work">3Ds</a> /
+                        <a href="#work">work process</a> /
+                        <a href="#branding">naming</a> /
+                        <a href="#furniture">furniture</a>
+                      </font>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
-
-      <div class="project-gallery gallery-five">
-        <img src="INTERIOR_files/221113-1.jpg" alt="Home styling">
-        <img src="INTERIOR_files/221113-2-2.jpg" alt="Home styling">
-        <img src="INTERIOR_files/221113-4.jpg" alt="Home styling">
-        <img src="INTERIOR_files/221113-5.jpg" alt="Home styling">
-        <img src="INTERIOR_files/221113-6.jpg" alt="Home styling">
-        <img src="INTERIOR_files/221113-8.jpg" alt="Home styling">
-        <img src="INTERIOR_files/p20221225-201123000-1e55f742-356b-47c1-830b-33c4961a57f0-copy.jpg" alt="Home styling">
-        <img src="INTERIOR_files/p20221225-200940000-ee9369c1-8d2d-426b-8793-4081d35dc6a2-copy.jpg" alt="Home styling">
-        <img src="INTERIOR_files/p20221225-200919000-4c1cae8f-da97-4162-819e-bd9227ab01f1-copy.jpg" alt="Home styling">
-      </div>
-    </section>
-
-    <!-- Studio apartment -->
-    <section class="project">
-      <div class="project-info">
-        <h2>STUDIO APARTMENT</h2>
-        <p>Seoul</p>
-      </div>
-
-      <div class="project-gallery gallery-five">
-        <img src="INTERIOR_files/a21-29-1.jpg" alt="Studio apartment">
-        <img src="INTERIOR_files/a21-29-3.jpg" alt="Studio apartment">
-        <img src="INTERIOR_files/a21-29-10.jpg" alt="Studio apartment">
-        <img src="INTERIOR_files/a21-29-14.jpg" alt="Studio apartment">
-        <img src="INTERIOR_files/a21-29-18.jpg" alt="Studio apartment">
-      </div>
-    </section>
-
-    <!-- Auditorium -->
-    <section class="project">
-      <div class="project-info">
-        <h2>YOUTH CONCERT HALL</h2>
-        <p>
-          For middle and high school students<br>
-          Sooyongro Church<br><br>
-          Concept: resonance
-        </p>
-      </div>
-
-      <div class="project-gallery">
-        <img src="INTERIOR_files/03-1.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/03-2b.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/03-3b.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/1-copy.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/3-copy.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/4-copy.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/1_13.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/3_10.jpg" alt="Youth concert hall">
-        <img src="INTERIOR_files/2_14.jpg" alt="Youth concert hall">
-      </div>
-    </section>
-
-    <!-- Exhibition -->
-    <section class="project">
-      <div class="project-info">
-        <h2>BENZ EXHIBITION HALL</h2>
-        <p>
-          Proposal, team work<br>
-          Guseo-dong, Busan<br><br>
-          Concept: the Milky Way
-        </p>
-      </div>
-
-      <div class="project-gallery">
-        <img src="INTERIOR_files/untitled-1-copy.jpg" alt="Benz exhibition hall">
-        <img src="INTERIOR_files/4-3d-view-2f-front_1.jpg" alt="Benz exhibition hall">
-        <img src="INTERIOR_files/4-3d-view-3f-counseling-room-a_1.jpg" alt="Benz exhibition hall">
-      </div>
-    </section>
-
-    <!-- Working space -->
-    <section class="project">
-      <div class="project-info">
-        <h2>GIRL SCOUTS BUSAN</h2>
-        <p>
-          Design and construction<br>
-          Choliang-dong, Busan<br><br>
-          Floor plan, elevation, 3D, sign
-        </p>
-      </div>
-
-      <div class="project-gallery">
-        <img src="INTERIOR_files/img-5870_1.jpg" alt="Girl Scouts Busan">
-        <img src="INTERIOR_files/img-5879.jpg" alt="Girl Scouts Busan">
-        <img src="INTERIOR_files/p20160217-081309242-997e59ca-412b-425d-9849-a93a6186d017.jpg" alt="Girl Scouts Busan">
-        <img src="INTERIOR_files/6_6.jpg" alt="Girl Scouts Busan">
-        <img src="INTERIOR_files/160202.jpg" alt="Girl Scouts Busan">
-        <img src="INTERIOR_files/160205-b.jpg" alt="Girl Scouts Busan">
-      </div>
-    </section>
-
-    <!-- Beauty and medical space -->
-    <section class="project">
-      <div class="project-info">
-        <h2>BEAUTY / MEDICAL SPACE</h2>
-        <p>
-          C Cosmetic Surgery<br>
-          H Cosmetic Surgery<br>
-          Y Cosmetic Surgery
-        </p>
-      </div>
-
-      <div class="project-gallery gallery-four">
-        <img src="INTERIOR_files/y.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/m-1.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/m-2.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/m-3.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/151210-atype-a.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/151210-atype-b.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/151210-atype-e.jpg" alt="Beauty and medical space">
-        <img src="INTERIOR_files/151210-btype-f.jpg" alt="Beauty and medical space">
-      </div>
-    </section>
-
-    <!-- Beauty parlor -->
-    <section class="project">
-      <div class="project-info">
-        <h2>LA BEAUTY CORE</h2>
-        <p>
-          Constructed<br>
-          Jangsan-dong, Busan<br><br>
-          Information, shampoo room, tea table zone,
-          seats, VIP room
-        </p>
-      </div>
-
-      <div class="project-gallery">
-        <img src="INTERIOR_files/1-1_1.jpg" alt="La Beauty Core">
-        <img src="INTERIOR_files/1-2_1.jpg" alt="La Beauty Core">
-        <img src="INTERIOR_files/1-3.jpg" alt="La Beauty Core">
-        <img src="INTERIOR_files/2-1.jpg" alt="La Beauty Core">
-        <img src="INTERIOR_files/2-2.jpg" alt="La Beauty Core">
-        <img src="INTERIOR_files/2-3.jpg" alt="La Beauty Core">
-      </div>
-    </section>
-
-    <!-- Franchise proposals -->
-    <section class="project">
-      <div class="project-info">
-        <h2>FRANCHISE PROPOSALS</h2>
-      </div>
-
-      <div class="project-gallery gallery-two">
-        <img src="INTERIOR_files/05-3d-1-copy_3.jpg" alt="Franchise proposal">
-        <img src="INTERIOR_files/05-3d-2-copy_3.jpg" alt="Franchise proposal">
-        <img src="INTERIOR_files/04_2.jpg" alt="Franchise proposal">
-        <img src="INTERIOR_files/03-copy.jpg" alt="Franchise proposal">
-        <img src="INTERIOR_files/05-3d-3-copy_1.jpg" alt="Franchise proposal">
-        <img src="INTERIOR_files/05-3d-4-copy.jpg" alt="Franchise proposal">
-      </div>
-    </section>
-
-    <!-- Naming and branding -->
-    <section class="project" id="branding">
-      <div class="project-info">
-        <h2>NAMING &amp; BRANDING</h2>
-        <p>
-          Logo design, menu illustration,
-          sign design and visual identity
-        </p>
-      </div>
-
-      <div class="project-gallery gallery-four">
-        <img src="INTERIOR_files/19.jpg" alt="Cloth store logo design">
-        <img src="INTERIOR_files/0-1.jpeg" alt="Interior company logo design">
-        <img src="INTERIOR_files/p20170329-165704710-87f429c6-fd90-4dc1-a422-33d3f1449f.jpeg" alt="Cafe menu illustration">
-        <img src="INTERIOR_files/p20170110-181024543-7ce7421e-135c-40df-92dd-0dbe4b4d49.jpeg" alt="Cafe sign design">
-      </div>
-    </section>
-
-    <!-- Furniture -->
-    <section class="project" id="furniture">
-      <div class="project-info">
-        <h2>FURNITURE</h2>
-        <p>
-          Furniture, lighting, hangers,
-          display and custom pieces
-        </p>
-      </div>
-
-      <div class="project-gallery gallery-four">
-        <img src="INTERIOR_files/160913-9.jpeg" alt="Furniture for clothing store">
-        <img src="INTERIOR_files/160920-4.jpg" alt="Logo, light, hanger and display">
-        <img src="INTERIOR_files/kakaotalk-20170113-181351461_orig.jpg" alt="Furniture for house">
-        <img src="INTERIOR_files/p20170117-074341955-069b68e9-3645-46cb-b2ed-8b757f7976c.jpg" alt="Furniture for house">
-      </div>
-    </section>
-
-    <div class="next-page">
-      <a href="CONTACT.html">NEXT PAGE</a>
-      <br>
-      <a class="contact-button" href="CONTACT.html">CONTACT ME</a>
     </div>
-
-  </main>
-
-  <footer class="site-footer"></footer>
-
-</body>
-</html>
